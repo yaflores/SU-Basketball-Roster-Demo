@@ -1,0 +1,167 @@
+:root {
+    --su-orange: #f76900;
+    --su-blue: #000e54;
+    --font-primary: font-family: 'Roboto', sans-serif;
+    --font-secondary: font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+} /* root is the brains of the website */
+h1, h2, h3, h4, h5, h6, p, ul, li {
+    padding: 0;
+    margin: 0;
+    font: inherit;
+}
+ul, li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--su-blue);
+}
+.display-format {
+    color: white;
+}
+.container {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: var(--font-primary);
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}
+h1 span {
+    color: var(--su-orange);
+    font-size: 1.75rem;
+
+}
+h3 {
+    font-size: .75rem;
+    font-weight: 400;
+    font-family: var(--font-secondary);
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    word-spacing: 2em;
+}
+span {
+    display: inline-block;
+    word-spacing: 2em;
+}
+.responsive-img {
+    width: 100%;
+    height: auto;
+}
+.list {
+    background-color: var(--su-blue);
+}
+.list article {
+    display: flex;
+    color: white;
+    flex-wrap: wrap; /* by default, it just keeps extending. so wrap flex tells you to go to the nice line */
+    gap: 1rem;
+    text-align: left;
+}
+.list article .player-headline {
+    color: white;
+    font-family: var(--font-primary);
+    font-weight: bold;
+    font-size: 1.5rem;
+    display: inline-flexbox;
+}
+.list article .player-info {
+    display: inline-flexbox;
+    margin-top: 50px;
+    margin-left: -115px;
+}
+.player-headline h2 {
+    word-spacing: 2em 
+}
+.list .player-first-name {
+    font-weight: 400;
+    font-size: .75em;
+    display: inline-flexbox;
+}
+.list article {
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.list article img {
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid var(--su-orange);
+}
+.grid {
+    background-color: var(--su-blue);
+    display: grid;
+    grid-template-columns: 1fr; /* telling every column to be 3 umits and then one leftover unit */
+    gap: 1rem;
+}
+.grid article {
+    background-color: white;
+    text-align: center;
+    margin-top: 50px;
+}
+.grid article img {
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid var(--su-orange);
+    margin-top: -50px;
+}
+.grid article .player-headline {
+    color: var(--su-blue);
+    font-family: var(--font-primary);
+    font-weight: bold;
+    font-size: 2rem;
+}
+.grid .player-first-name {
+    font-weight: 400;
+    font-size: .75em;
+    display: block;
+}
+.grid h3 {
+    color: var(--su-blue);
+}
+@media(min-width: 700px){
+    /* body {
+        background-color: orange;
+    } */
+    .container {
+        width: 700px;
+        margin: 0 auto;
+    }
+    .grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+} /* end of tablet */
+@media(min-width: 1000px){
+    /* body {
+        background-color: red;
+    } */
+    .container {
+        width: 1000px;
+    }
+    .grid {
+        grid-template-columns: repeat(3,1fr);
+    }
+} /* end of laptop */
+@media(min-width: 1200px){
+    /* body {
+        background-color: violet;
+    } */
+    .container {
+        width: 1200px;
+    }
+} /* end of desktop */
+
+
