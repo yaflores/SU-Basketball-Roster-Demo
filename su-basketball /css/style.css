@@ -1,0 +1,235 @@
+:root {
+    --su-orange: #F76900;
+    --su-blue: #000E54;
+    --font-primary: 'Roboto', Arial, sans-serif;
+    --font-secondary: 'Roboto Condensed', Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li {
+    padding: 0;
+    margin: 0;
+    font: inherit;
+}
+ul, li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--su-blue);
+}
+.container {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: var(--font-primary);
+    color: white;
+    text-transform: uppercase;
+    line-height: .9;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    display: block;
+    text-align: center;
+}
+h1 span {
+    color: var(--su-orange);
+    font-size: .75em;
+}
+.filter-label {
+    font-family: var(--font-primary);
+    display: block;
+    font-size: .8rem;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+    color: var(--su-blue);
+}
+.filter-select {
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    width: 100%;
+    padding: .5rem;
+}
+.responsive-img {
+    width: 100%;
+    height: auto;
+}
+.filters-bar {
+    background-color: var(--su-orange);
+    padding: 1rem 0;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.filters-group {
+    width: 100%;
+}
+.player-image {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid var(--su-orange);
+}
+.grid .player-image{
+    margin-top: -50px;
+}
+.player-headline {
+    font-family: var(--font-primary);
+    font-weight: bold;
+    font-size: 2rem;
+}
+.player-first-name {
+    font-weight: 400;
+    font-size: .75em;
+    display: block;
+}
+.player-meta {
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+}
+.list .player-headline span {
+    display: inline;
+}
+.list .player-first-name { 
+    font-size: 1em;
+}
+.list {
+    /* background-color: tan; */
+    color: white;
+}
+.list article {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+}
+.list article .player-image {
+    width: 100px;
+}
+.list .player-headline span{
+    display: inline;
+}
+.list .player-column{
+    display: inline;
+}
+.grid {
+    /* background-color: magenta; */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    color: var(--su-blue);
+}
+.grid .player-main-content {
+    background-color: white;
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 1rem;
+}
+.list .player-main-content {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+}
+.list .player-secondary-column {
+    /* width: 30%; */
+    display: none;
+}
+.list .player-tertiary-column {
+    /* width: 20%;*/
+    display: none;
+}
+.grid .player-secondary-column, .grid .player-tertiary-column {
+    display: none;
+}
+.grid .player-meta {
+    color: var(--su-blue);
+}
+.player-cta {
+    background-color: var(--su-orange);
+    display: block;
+    padding: 1rem;
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+.list .player-cta {
+    display: none;
+}
+.grid .player-cta-icon {
+    display: none;
+}
+.list .player-cta-label {
+    display: none;
+}
+.player-cta-icon {
+    height: 1rem;
+    width: auto;
+}
+@media (min-width:700px) {
+    /* body {
+        background-color: orange;
+    } */
+    .container {
+        width: 700px;
+        margin: 0px auto;
+    }
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+} /* end of tablet */
+@media (min-width:1000px) {
+    /* body {
+        background-color: red;
+    } */
+    .container {
+        width: 1000px;
+    }
+    .filters-bar {
+        flex-wrap: nowrap;
+    }
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .list .player-main-content {
+        width: 40%;
+    }
+    .list .player-main-content {
+        width: 40%;
+    }
+    .list .player-secondary-column {
+        display: block;
+         width: 30%; 
+    }
+    .list .player-tertiary-column {
+        display: block;
+        width: 20%;
+    }
+    .list .player-cta {
+        display: block;
+        width: 10%;
+    }
+} /* end of laptop */
+@media (min-width:1200px) {
+    /* body {
+        background-color: violet;
+    } */
+    .container {
+        width: 1200px;
+    }
+} /* end of desktop */
